@@ -56,6 +56,14 @@ nav a {
   padding: 5rem 1rem;
 }
 
+.small-hero {
+  background-color: #00796b;
+  background-image: none;
+  padding: 3rem 1rem;
+  text-align: center;
+  color: white;
+}
+
 .hero h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
