@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products | BalticEco Imports</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>BalticEco Imports</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="home.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="cart">
+          🛒 <span id="cart-count">0</span> items
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Our Products</h2>
+    <p>Explore our range of eco-conscious Estonian exports:</p>
+
+    <div class="product-list">
+
+      <div class="product" data-product="herbal-tea">
+        <h3>Wild Herbal Tea Blend</h3>
+        <p>100g pack of fireweed, nettle, and mint. Purely natural.</p>
+        <div class="controls">
+          <button class="minus">−</button>
+          <span class="quantity">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="product" data-product="wool-socks">
+        <h3>Natural Woolen Socks</h3>
+        <p>Ethically sourced, handmade wool socks. Sizes S–XL.</p>
+        <div class="controls">
+          <button class="minus">−</button>
+          <span class="quantity">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="product" data-product="birch-wood">
+        <h3>Raw Birch Wood Planks</h3>
+        <p>Untreated Baltic birch, ideal for woodworking. Sold by meter.</p>
+        <div class="controls">
+          <button class="minus">−</button>
+          <span class="quantity">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="product" data-product="chaga">
+        <h3>Chaga Mushroom Chunks</h3>
+        <p>Wild-harvested chaga from Estonian forests. 200g pack.</p>
+        <div class="controls">
+          <button class="minus">−</button>
+          <span class="quantity">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="product" data-product="birch-bowl">
+        <h3>Handcrafted Birch Bowls</h3>
+        <p>Polished, food-safe wooden bowls from Baltic artisans.</p>
+        <div class="controls">
+          <button class="minus">−</button>
+          <span class="quantity">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="checkout-summary">
+      <h4>🛒 Cart Summary</h4>
+      <p>Total Items: <span id="total-items">0</span></p>
+      <a href="#" class="btn">Proceed to Checkout</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 BalticEco Imports. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
