@@ -108,3 +108,40 @@ footer {
   font-size: 0.9rem;
   color: #555;
 }
+
+.product-list {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.controls {
+  margin-top: 1rem;
+}
+
+.controls button {
+  padding: 0.4rem 0.8rem;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+}
+
+.checkout-summary {
+  margin-top: 3rem;
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.cart {
+  margin-left: auto;
+  font-weight: bold;
+  font-size: 1rem;
+}
