@@ -7,6 +7,20 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <script>
+  document.getElementById("final-submit").addEventListener("click", function () {
+    // Simulate basic card number check
+    const cardNumber = document.getElementById("cardnumber").value;
+
+    if (cardNumber.startsWith("4")) {
+      // Simulate accepted (e.g., Visa)
+      window.location.href = "payment-accepted.html";
+    } else {
+      // Simulate declined
+      window.location.href = "payment-declined.html";
+    }
+  });
+</script>
   <header>
     <div class="container">
       <h1>BalticEco Imports</h1>
