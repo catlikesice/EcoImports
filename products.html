@@ -155,5 +155,22 @@
       <p>&copy; 2025 BalticEco Imports. All rights reserved.</p>
     </div>
   </footer>
+  <script>
+  function increment(button) {
+    const quantitySpan = button.parentElement.querySelector(".quantity");
+    let value = parseInt(quantitySpan.textContent);
+    quantitySpan.textContent = value + 1;
+  }
+
+  function decrement(button) {
+    const quantitySpan = button.parentElement.querySelector(".quantity");
+    let value = parseInt(quantitySpan.textContent);
+    if (value > 0) {
+      quantitySpan.textContent = value - 1;
+    }
+  }
+</script>
 </body>
 </html>
+
+
