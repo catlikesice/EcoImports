@@ -1,0 +1,14 @@
+CREATE TABLE products (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(100),
+  stock INT DEFAULT 0,
+  price DECIMAL(10,2)
+);
+
+CREATE TABLE orders (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  product_id INT,
+  quantity INT,
+  order_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (product_id) REFERENCES products(id)
+);
