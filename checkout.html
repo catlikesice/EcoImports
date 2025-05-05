@@ -62,13 +62,7 @@
   </div>
 
   <script>
-    // Sample cart data for testing – in practice, you'd pull this from localStorage or sessionStorage
-    const cart = JSON.parse(localStorage.getItem('cart')) || [
-      { name: "Raw Birch Wood", quantity: 2, price: 5.00 },
-      { name: "Organic Dried Herbs", quantity: 1, price: 3.50 },
-      { name: "Yak Wool Felt", quantity: 3, price: 7.25 }
-    ];
-
+   
     const cartTable = document.getElementById('cart-items');
     const totalSpan = document.getElementById('total');
 
