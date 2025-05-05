@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout – EcoImports</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .checkout-container {
+      max-width: 600px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+    }
+
+    th, td {
+      border-bottom: 1px solid #ccc;
+      padding: 0.75rem;
+      text-align: left;
+    }
+
+    .total {
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-align: right;
+    }
+
+    .checkout-btn {
+      padding: 0.8rem 1.2rem;
+      background-color: #027b4b;
+      color: white;
+      border: none;
+      cursor: pointer;
+      float: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="checkout-container">
+    <h1>Checkout</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Qty</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items">
+        <!-- Items will be inserted here -->
+      </tbody>
+    </table>
+
+    <p class="total">Total: €<span id="total">0.00</span></p>
+
+    <a href="payment.html"><button class="checkout-btn">Proceed to Payment</button></a>
+  </div>
+
+  <script>
+    // Sample cart data for testing – in practice, you'd pull this from localStorage or sessionStorage
+    const cart = JSON.parse(localStorage.getItem('cart')) || [
+      { name: "Raw Birch Wood", quantity: 2, price: 5.00 },
+      { name: "Organic Dried Herbs", quantity: 1, price: 3.50 },
+      { name: "Yak Wool Felt", quantity: 3, price: 7.25 }
+    ];
+
+    const cartTable = document.getElementById('cart-items');
+    const totalSpan = document.getElementById('total');
+
+    let total = 0;
+
+    cart.forEach(item => {
+      const row = document.createElement('tr');
+
+      const nameCell = document.createElement('td');
+      nameCell.textContent = item.name;
+
+      const qtyCell = document.createElement('td');
+      qtyCell.textContent = item.quantity;
+
+      const priceCell = document.createElement('td');
+      const subtotal = item.quantity * item.price;
+      priceCell.textContent = `€${subtotal.toFixed(2)}`;
+
+      total += subtotal;
+
+      row.appendChild(nameCell);
+      row.appendChild(qtyCell);
+      row.appendChild(priceCell);
+      cartTable.appendChild(row);
+    });
+
+    totalSpan.textContent = total.toFixed(2);
+  </script>
+</body>
+</html>
