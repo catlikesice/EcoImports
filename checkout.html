@@ -52,22 +52,28 @@
         </tr>
       </thead>
       <tbody id="cart-items">
-        <!-- Items will be inserted here -->
+        <!-- Items will be dynamically inserted here -->
       </tbody>
     </table>
 
     <p class="total">Total: €<span id="total">0.00</span></p>
+    <p>Total Items: <span id="total-items">0</span></p>
 
     <a href="payment.html"><button class="checkout-btn">Proceed to Payment</button></a>
   </div>
 
   <script>
-   
+    // Retrieve the cart data from localStorage
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
     const cartTable = document.getElementById('cart-items');
     const totalSpan = document.getElementById('total');
+    const totalItemsSpan = document.getElementById('total-items');
 
     let total = 0;
+    let totalItems = 0;
 
+    // Populate the table with cart data
     cart.forEach(item => {
       const row = document.createElement('tr');
 
@@ -82,6 +88,7 @@
       priceCell.textContent = `€${subtotal.toFixed(2)}`;
 
       total += subtotal;
+      totalItems += item.quantity;
 
       row.appendChild(nameCell);
       row.appendChild(qtyCell);
@@ -89,7 +96,9 @@
       cartTable.appendChild(row);
     });
 
+    // Update the total and total items
     totalSpan.textContent = total.toFixed(2);
+    totalItemsSpan.textContent = totalItems;
   </script>
 </body>
 </html>
