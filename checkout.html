@@ -37,6 +37,16 @@
       cursor: pointer;
       float: right;
     }
+
+    .quantity-input {
+      width: 50px;
+      text-align: center;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
@@ -49,6 +59,7 @@
           <th>Product</th>
           <th>Qty</th>
           <th>Price</th>
+          <th>Subtotal</th>
         </tr>
       </thead>
       <tbody id="cart-items">
@@ -59,46 +70,102 @@
     <p class="total">Total: €<span id="total">0.00</span></p>
     <p>Total Items: <span id="total-items">0</span></p>
 
-    <a href="payment.html"><button class="checkout-btn">Proceed to Payment</button></a>
+    <p id="error-message" class="error"></p>
+
+    <a href="payment.html"><button id="checkout-btn" class="checkout-btn" disabled>Proceed to Payment</button></a>
   </div>
 
   <script>
+    // Simulated stock data (this would typically come from a backend or database)
+    const stock = {
+      'Eco Bag': 10,
+      'Reusable Bottle': 5,
+      'Bamboo Straw Set': 20
+    };
+
     // Retrieve the cart data from localStorage
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     const cartTable = document.getElementById('cart-items');
     const totalSpan = document.getElementById('total');
     const totalItemsSpan = document.getElementById('total-items');
+    const errorMessage = document.getElementById('error-message');
+    const checkoutButton = document.getElementById('checkout-btn');
 
     let total = 0;
-    let totalItems = 0;
+
+    // Function to update the total and subtotal dynamically and validate stock
+    function updateTotals() {
+      total = 0;
+      let totalItems = 0;
+      let hasError = false;
+
+      cart.forEach((item, index) => {
+        const quantityInput = document.getElementById(`quantity-${index}`);
+        const quantity = parseInt(quantityInput.value, 10) || 0;
+        const subtotal = quantity * item.price;
+
+        // Check stock limits
+        if (quantity > stock[item.name]) {
+          hasError = true;
+          errorMessage.textContent = `The quantity for "${item.name}" exceeds the available stock. Max: ${stock[item.name]}.`;
+          quantityInput.classList.add('error');
+        } else {
+          quantityInput.classList.remove('error');
+        }
+
+        total += subtotal;
+        totalItems += quantity;
+
+        document.getElementById(`subtotal-${index}`).textContent = `€${subtotal.toFixed(2)}`;
+      });
+
+      // Update totals
+      totalSpan.textContent = total.toFixed(2);
+      totalItemsSpan.textContent = totalItems;
+
+      // Enable or disable checkout button based on errors
+      checkoutButton.disabled = hasError;
+
+      // Clear error message if no errors
+      if (!hasError) {
+        errorMessage.textContent = '';
+      }
+    }
 
     // Populate the table with cart data
-    cart.forEach(item => {
+    cart.forEach((item, index) => {
       const row = document.createElement('tr');
 
       const nameCell = document.createElement('td');
       nameCell.textContent = item.name;
 
       const qtyCell = document.createElement('td');
-      qtyCell.textContent = item.quantity;
+      const qtyInput = document.createElement('input');
+      qtyInput.type = 'number';
+      qtyInput.min = '0';
+      qtyInput.value = item.quantity || 0; // Default quantity
+      qtyInput.className = 'quantity-input';
+      qtyInput.id = `quantity-${index}`;
+      qtyInput.addEventListener('input', updateTotals);
+      qtyCell.appendChild(qtyInput);
 
       const priceCell = document.createElement('td');
-      const subtotal = item.quantity * item.price;
-      priceCell.textContent = `€${subtotal.toFixed(2)}`;
+      priceCell.textContent = `€${item.price.toFixed(2)}`;
 
-      total += subtotal;
-      totalItems += item.quantity;
+      const subtotalCell = document.createElement('td');
+      subtotalCell.textContent = `€${(item.quantity * item.price).toFixed(2)}`;
+      subtotalCell.id = `subtotal-${index}`;
 
       row.appendChild(nameCell);
       row.appendChild(qtyCell);
       row.appendChild(priceCell);
+      row.appendChild(subtotalCell);
       cartTable.appendChild(row);
     });
 
-    // Update the total and total items
-    totalSpan.textContent = total.toFixed(2);
-    totalItemsSpan.textContent = totalItems;
+    // Initial calculation of totals
+    updateTotals();
   </script>
 </body>
 </html>
