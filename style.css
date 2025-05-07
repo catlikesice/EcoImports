@@ -86,6 +86,26 @@ nav a {
 .btn:hover {
   background-color: #004d40;
 }
+/* General Styling for the Next Button */
+.next-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #007BFF; /* Same blue as header (adjust if needed) */
+  color: white;
+  text-decoration: none;
+  border: 2px solid #0056b3; /* Border matches header color */
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.next-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  border-color: #003d80; /* Slightly darker border on hover */
+}
 
 /* About Section */
 .about {
