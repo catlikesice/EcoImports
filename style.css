@@ -89,12 +89,13 @@ nav a {
 /* General Styling for the Next Button */
 /* Styling for the Next Button */
 /* Styling for the Next Button */
+/* Styling for the Next Button */
 .next-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
   padding: 10px 20px;
-  background-color: #006400; /* Dark green button background */
+  background-color: #00796b; /* Teal green button background */
   color: white;
   text-decoration: none;
   border: 2px solid black; /* Black border */
@@ -105,8 +106,9 @@ nav a {
 }
 
 .next-button:hover {
-  background-color: #004d00; /* Even darker green on hover */
+  background-color: #005f56; /* Darker teal green on hover */
   border-color: black; /* Black border on hover */
+} /* Black border on hover */
 }
 
 /* About Section */
