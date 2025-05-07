@@ -87,15 +87,16 @@ nav a {
   background-color: #004d40;
 }
 /* General Styling for the Next Button */
+/* Styling for the Next Button */
 .next-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
   padding: 10px 20px;
-  background-color: #007BFF; /* Same blue as header (adjust if needed) */
+  background-color: #28a745; /* Green color matching the header */
   color: white;
   text-decoration: none;
-  border: 2px solid #0056b3; /* Border matches header color */
+  border: 2px solid #218838; /* Darker green border for contrast */
   border-radius: 5px;
   font-size: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -103,8 +104,8 @@ nav a {
 }
 
 .next-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  border-color: #003d80; /* Slightly darker border on hover */
+  background-color: #218838; /* Darker green on hover */
+  border-color: #1e7e34; /* Even darker green border on hover */
 }
 
 /* About Section */
