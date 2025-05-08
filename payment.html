@@ -5,6 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Payment | BalticEco Imports</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Fix the spacing issue */
+    .payment-section {
+      margin-bottom: 30px; /* Add space between sections */
+    }
+
+    #card-payment-form {
+      margin-bottom: 20px; /* Add space below the form */
+    }
+
+    .btn {
+      background-color: #006400; /* Dark green */
+      color: white;
+      border: 2px solid black;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #004d00; /* Darker green on hover */
+    }
+  </style>
 </head>
 <body>
   <script>
@@ -64,8 +92,6 @@
       </form>
     </section>
 
-    <hr />
-
     <section class="payment-section">
       <h3>Or Pay with PayPal</h3>
       <a href="https://www.paypal.com" target="_blank" class="btn">Continue to PayPal</a>
@@ -78,4 +104,3 @@
     </div>
   </footer>
 </body>
-</html>
