@@ -2,53 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Payment | BalticEco Imports</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Fix the spacing issue */
-    .payment-section {
-      margin-bottom: 30px; /* Add space between sections */
-    }
-
-    #card-payment-form {
-      margin-bottom: 20px; /* Add space below the form */
-    }
-
-    .btn {
-      background-color: #006400; /* Dark green */
-      color: white;
-      border: 2px solid black;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-size: 16px;
-      display: inline-block;
-      text-align: center;
-      text-decoration: none;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s ease, border-color 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #004d00; /* Darker green on hover */
-    }
-  </style>
 </head>
 <body>
-  <script>
-  document.getElementById("final-submit").addEventListener("click", function () {
-    // Simulate basic card number check
-    const cardNumber = document.getElementById("cardnumber").value;
-
-    if (cardNumber.startsWith("4")) {
-      // Simulate accepted (e.g., Visa)
-      window.location.href = "payment-accepted.html";
-    } else {
-      // Simulate declined
-      window.location.href = "payment-declined.html";
-    }
-  });
-</script>
   <header>
     <div class="container">
       <h1>BalticEco Imports</h1>
@@ -64,6 +22,62 @@
       </nav>
     </div>
   </header>
+
+  <main class="container">
+    <h2>Choose a Payment Method</h2>
+
+    <section class="payment-section">
+      <h3>Pay with Card</h3>
+      <form id="card-payment-form">
+        <label for="cardholder">Name on Card:</label>
+        <input type="text" id="cardholder" required />
+
+        <label for="cardnumber">Card Number:</label>
+        <input type="text" id="cardnumber" maxlength="19" placeholder="1234 5678 9012 3456" required />
+
+        <div class="row">
+          <div>
+            <label for="expiry">Expiry Date:</label>
+            <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required />
+          </div>
+          <div>
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" maxlength="4" required />
+          </div>
+        </div>
+
+        <button type="submit" id="final-submit" class="btn">Pay Now</button>
+      </form>
+    </section>
+
+    <section class="payment-section">
+      <h3>Or Pay with PayPal</h3>
+      <a href="https://www.paypal.com" target="_blank" class="btn">Continue to PayPal</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 BalticEco Imports. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("final-submit").addEventListener("click", function () {
+      // Simulate basic card number check
+      const cardNumber = document.getElementById("cardnumber").value;
+
+      if (cardNumber.startsWith("4")) {
+        // Simulate accepted (e.g., Visa)
+        window.location.href = "payment-accepted.html";
+      } else {
+        // Simulate declined
+        window.location.href = "payment-declined.html";
+      }
+    });
+  </script>
+</body>
+</html>
 
   <main class="container">
     <h2>Choose a Payment Method</h2>
@@ -104,3 +118,4 @@
     </div>
   </footer>
 </body>
+</html>
