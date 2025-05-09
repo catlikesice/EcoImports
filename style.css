@@ -103,7 +103,9 @@ nav a:hover {
   background-color: #004d40; /* Darker green on hover */
 }
 .next-button {
-  display: inline-block;
+  position: fixed; /* Fix the button to the screen */
+  bottom: 20px; /* 20px from the bottom of the screen */
+  right: 20px; /* 20px from the right edge of the screen */
   background-color: #00796b; /* Teal green */
   color: white;
   padding: 0.8rem 1.2rem;
@@ -115,9 +117,8 @@ nav a:hover {
 }
 
 .next-button:hover {
-  background-color: #004d40; /* Darker green on hover */
+  background-color: #005a4f; /* Darker teal green on hover */
 }
-
 /* About Section */
 .about {
   background-color: #ffffff;
