@@ -1,4 +1,4 @@
-/* Reset & base */
+/* General Styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,16 +7,18 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #2e2e2e;
+  color: #333; /* Dark gray text for better readability */
   background-color: #f8f8f5;
   line-height: 1.6;
 }
 
+/* Links */
 a {
   text-decoration: none;
   color: #00695c;
 }
 
+/* Container */
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -25,43 +27,45 @@ a {
 
 /* Header */
 header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
+  background-color: #144d3c; /* Dark green */
+  color: white;
   padding: 1rem 0;
 }
 
 header h1 {
   font-size: 1.8rem;
-  color: #00796b;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav ul {
-  display: flex;
   list-style: none;
+  display: flex;
   gap: 1.5rem;
-  margin-top: 0.5rem;
 }
 
 nav a {
+  color: white;
   font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 /* Hero Section */
 .hero {
-  background-image: url('https://images.unsplash.com/photo-1588515911202-a7f3d1d6a29c'); /* Replace with an Estonian forest or crafts photo */
+  background-image: url('https://images.unsplash.com/photo-1588515911202-a7f3d1d6a29c'); /* Replace with a dark image */
   background-size: cover;
   background-position: center;
-  color: white;
+  color: #333; /* Dark gray text for readability */
   text-align: center;
   padding: 5rem 1rem;
-}
-
-.small-hero {
-  background-color: #00796b;
-  background-image: none;
-  padding: 3rem 1rem;
-  text-align: center;
-  color: white;
 }
 
 .hero h2 {
@@ -76,7 +80,7 @@ nav a {
 }
 
 .btn {
-  background-color: #00796b;
+  background-color: #00796b; /* Teal green */
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
@@ -84,31 +88,7 @@ nav a {
 }
 
 .btn:hover {
-  background-color: #004d40;
-}
-/* General Styling for the Next Button */
-/* Styling for the Next Button */
-/* Styling for the Next Button */
-/* Styling for the Next Button */
-.next-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  background-color: #00796b; /* Teal green button background */
-  color: white;
-  text-decoration: none;
-  border: 2px solid black; /* Black border */
-  border-radius: 5px;
-  font-size: 16px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.next-button:hover {
-  background-color: #005f56; /* Darker teal green on hover */
-  border-color: black; /* Black border on hover */
-} /* Black border on hover */
+  background-color: #004d40; /* Darker green on hover */
 }
 
 /* About Section */
@@ -132,120 +112,4 @@ footer {
   font-size: 0.9rem;
   color: #555;
 }
-
-.product-list {
-  display: grid;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.product {
-  background: #ffffff;
-  border: 1px solid #ddd;
-  padding: 1.5rem;
-  border-radius: 8px;
-}
-
-.controls {
-  margin-top: 1rem;
-}
-
-.controls button {
-  padding: 0.4rem 0.8rem;
-  margin: 0 0.5rem;
-  font-size: 1rem;
-}
-
-.checkout-summary {
-  margin-top: 3rem;
-  background-color: #f4f4f4;
-  padding: 1rem;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.cart {
-  margin-left: auto;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-/* === General Styles === */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f5f3;
-  color: #333;
-  line-height: 1.6;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* === Header and Navigation === */
-header {
-  background-color: #144d3c;
-  color: #fff;
-  padding: 1rem 0;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-.cart {
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-/* === Product Section === */
-.product-section,
-main {
-  padding: 2rem 0;
-}
-
-.product-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.product {
-  background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow
 
