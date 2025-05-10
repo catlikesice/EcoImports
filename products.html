@@ -6,41 +6,6 @@
   <title>Products | BalticEco Imports</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
-  <style>
-    /* Add box styling for products */
-    .product {
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 16px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      background-color: #f9f9f9;
-    }
-
-    .product h3 {
-      margin-top: 0;
-    }
-
-    .quantity-control {
-      display: flex;
-      align-items: center;
-      margin-top: 10px;
-    }
-
-    .quantity-control button {
-      margin: 0 5px;
-      padding: 5px 10px;
-      font-size: 16px;
-    }
-
-    .checkout-summary {
-      border: 2px dashed #007BFF;
-      border-radius: 8px;
-      padding: 16px;
-      margin-top: 30px;
-      background-color: #eaf4ff;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -54,9 +19,9 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="cart">
-          <a href="checkout.html">
-            🛒 <span id="cart-count">0</span> items
-          </a>
+      <a href="checkout.html">
+  🛒 <span id="cart-count">0</span> items
+      </a>
         </div>
       </nav>
     </div>
@@ -67,36 +32,134 @@
     <p>Explore our range of eco-conscious Estonian exports:</p>
 
     <div class="product-list">
+
       <div class="product" data-product="herbal-tea">
         <h3>Wild Herbal Tea Blend</h3>
         <p>100g pack of fireweed, nettle, and mint. Purely natural.</p>
         <div class="quantity-control">
-          <button onclick="decrement(this)">−</button>
-          <span class="quantity">0</span>
-          <button onclick="increment(this)">+</button>
-        </div>
-        <p class="stock-message" style="color: red; display: none;">Sorry, you have exceeded the available stock.</p>
-      </div>
+    <button onclick="decrement(this)">−</button>
+    <span class="quantity">0</span>
+    <button onclick="increment(this)">+</button>
+           </div>
+  <p class="stock-message" style="color: red; display: none;">Sorry, you have exceeded the available stock.</p>
+  </div>
 
       <div class="product" data-product="wool-socks">
         <h3>Natural Woolen Socks</h3>
         <p>Ethically sourced, handmade wool socks. Sizes S–XL.</p>
-        <div class="quantity-control">
-          <button onclick="decrement(this)">−</button>
-          <span class="quantity">0</span>
-          <button onclick="increment(this)">+</button>
-        </div>
-        <p class="stock-message" style="color: red; display: none;">Sorry, you have exceeded the available stock.</p>
-      </div>
+       <div class="quantity-control">
+    <button onclick="decrement(this)">−</button>
+    <span class="quantity">0</span>
+    <button onclick="increment(this)">+</button>
+          </div>
+  <p class="stock-message" style="color: red; display: none;">Sorry, you have exceeded the available stock.</p>
+  </div>
 
-      <!-- Repeat for other products -->
+      <div class="product" data-product="birch-wood">
+        <h3>Raw Birch Wood Planks</h3>
+        <p>Untreated Baltic birch, ideal for woodworking. Sold by meter.</p>
+       <div class="quantity-control">
+    <button onclick="decrement(this)">−</button>
+    <span class="quantity">0</span>
+    <button onclick="increment(this)">+</button>
+          </div>
+  <p class="stock-message" style="color: red; display: none;">Sorry, you have exceeded the available stock.</p>
+  </div>
 
-      <div class="checkout-summary">
-        <h4>🛒 Cart Summary</h4>
-        <p>Total Items: <span id="total-items">0</span></p>
-        <a href="checkout.html" class="btn">Proceed to Checkout</a>
+      <div class="product" data-product="chaga">
+        <h3>Chaga Mushroom Chunks</h3>
+        <p>Wild-harvested chaga from Estonian forests. 200g pack.</p>
+         <div class="quantity-control">
+    <button onclick="decrement(this)">−</button>
+    <span class="quantity">0</span>
+    <button onclick="increment(this)">+</button>
+            </div>
+  <p class="stock-message" style="color: red; display: none;">Sorry, you have exceeded the available stock.</p>
+  </div>
+
+      <div class="product" data-product="birch-bowl">
+        <h3>Handcrafted Birch Bowls</h3>
+        <p>Polished, food-safe wooden bowls from Baltic artisans.</p>
+         <div class="quantity-control">
+    <button onclick="decrement(this)">−</button>
+    <span class="quantity">0</span>
+    <button onclick="increment(this)">+</button>
+            </div>
+  <p class="stock-message" style="color: red; display: none;">Sorry, you have exceeded the available stock.</p>
+  </div>
+
+    <div class="product" data-product="hemp-fiber">
+  <h3>Raw Hemp Fiber</h3>
+  <p>Strong, unprocessed hemp fibers for textiles and insulation. 1kg bundle.</p>
+   <div class="quantity-control">
+    <button onclick="decrement(this)">−</button>
+    <span class="quantity">0</span>
+    <button onclick="increment(this)">+</button>
       </div>
+  <p class="stock-message" style="color: red; display: none;">Sorry, you have exceeded the available stock.</p>
+  </div>
+
+<div class="product" data-product="linseed-oil">
+  <h3>Cold-Pressed Linseed Oil</h3>
+  <p>Organic linseed oil from Estonian flax seeds. 250ml bottle.</p>
+ <div class="quantity-control">
+    <button onclick="decrement(this)">−</button>
+    <span class="quantity">0</span>
+    <button onclick="increment(this)">+</button>
     </div>
+  <p class="stock-message" style="color: red; display: none;">Sorry, you have exceeded the available stock.</p>
+  </div>
+
+<div class="product" data-product="handwoven-blanket">
+  <h3>Handwoven Wool Blanket</h3>
+  <p>Traditional Estonian wool blanket, naturally dyed. 140 x 200 cm.</p>
+   <div class="quantity-control">
+    <button onclick="decrement(this)">−</button>
+    <span class="quantity">0</span>
+    <button onclick="increment(this)">+</button>
+      </div>
+  <p class="stock-message" style="color: red; display: none;">Sorry, you have exceeded the available stock.</p>
+  </div>
+
+<div class="product" data-product="juniper-cutting-board">
+  <h3>Juniper Cutting Board</h3>
+  <p>Fragrant and antibacterial, handmade from native juniper wood.</p>
+   <div class="quantity-control">
+    <button onclick="decrement(this)">−</button>
+    <span class="quantity">0</span>
+    <button onclick="increment(this)">+</button>
+      </div>
+  <p class="stock-message" style="color: red; display: none;">Sorry, you have exceeded the available stock.</p>
+  </div>
+
+<div class="product" data-product="dried-sea-buckthorn">
+  <h3>Dried Sea Buckthorn Berries</h3>
+  <p>Vitamin-rich, wild-harvested berries. 100g resealable pouch.</p>
+   <div class="quantity-control">
+    <button onclick="decrement(this)">−</button>
+    <span class="quantity">0</span>
+    <button onclick="increment(this)">+</button>
+      </div>
+  <p class="stock-message" style="color: red; display: none;">Sorry, you have exceeded the available stock.</p>
+  </div>
+
+<div class="product" data-product="eco-soap">
+  <h3>Herbal Eco Soap</h3>
+  <p>Cold-processed soap made with birch leaf extract and essential oils.</p>
+   <div class="quantity-control">
+    <button onclick="decrement(this)">−</button>
+    <span class="quantity">0</span>
+    <button onclick="increment(this)">+</button>
+      </div>
+  <p class="stock-message" style="color: red; display: none;">Sorry, you have exceeded the available stock.</p>
+  </div>
+      <div class="checkout-summary">
+      <h4>🛒 Cart Summary</h4>
+      <p>Total Items: <span id="total-items">0</span></p>
+      <a href="checkout.html" class="btn">Proceed to Checkout</a>
+    </div>
+    <p class="stock-message" style="color: red; display: none;">Sorry, you have exceeded the available stock.</p>
+</div>
   </main>
 
   <footer>
@@ -104,23 +167,22 @@
       <p>&copy; 2025 BalticEco Imports. All rights reserved.</p>
     </div>
   </footer>
-
   <!-- JavaScript functions -->
   <script>
-    function increment(button) {
-      const quantitySpan = button.parentElement.querySelector(".quantity");
-      let value = parseInt(quantitySpan.textContent);
-      quantitySpan.textContent = value + 1;
-    }
+  function increment(button) {
+    const quantitySpan = button.parentElement.querySelector(".quantity");
+    let value = parseInt(quantitySpan.textContent);
+    quantitySpan.textContent = value + 1;
+  }
 
-    function decrement(button) {
-      const quantitySpan = button.parentElement.querySelector(".quantity");
-      let value = parseInt(quantitySpan.textContent);
-      if (value > 0) {
-        quantitySpan.textContent = value - 1;
-      }
+  function decrement(button) {
+    const quantitySpan = button.parentElement.querySelector(".quantity");
+    let value = parseInt(quantitySpan.textContent);
+    if (value > 0) {
+      quantitySpan.textContent = value - 1;
     }
-  </script>
+  }
+</script>
 </body>
 </html>
 
