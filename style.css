@@ -190,14 +190,16 @@ footer {
   margin-top: 30px;
   background-color: #eaf4ff;
 }
-/* Background styling for the middle section */
+/* Styling for the middle section with the correct background image */
 .middle-section {
-  background: url('https://github.com/catlikesice/EcoImports/blob/main/Screenshot%202025-05-06%20143651.png') center center / cover no-repeat;
+  background: url('https://raw.githubusercontent.com/catlikesice/EcoImports/main/Screenshot%202025-05-06%20143651.png') center center / cover no-repeat;
   padding: 50px 20px;
   color: #ffffff; /* White text for contrast */
-  text-align: center; /* Center-align text */
+  text-align: center;
   border-radius: 10px; /* Slightly rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+  margin: 20px 0; /* Add spacing above and below the section */
+  min-height: 300px; /* Ensure the section has enough height to display the background */
 }
 
 /* Optional: Ensure the text inside the section is readable */
