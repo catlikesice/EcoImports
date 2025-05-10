@@ -35,22 +35,12 @@ header {
 header h1 {
   font-size: 1.8rem;
   margin: 0;
+  color: #0072CE; /* Estonian flag blue for the title */
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
+/* Navigation Links */
 nav a {
-  color: white;
+  color: #0072CE; /* Estonian flag blue for navigation links */
   font-weight: 500;
 }
 
