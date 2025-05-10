@@ -30,32 +30,34 @@ header {
   background-color: #144d3c; /* Dark green */
   color: white;
   padding: 1rem 0;
+  display: flex; /* Use flexbox for smoother layout */
+  justify-content: space-between; /* Space out title and navigation */
+  align-items: center; /* Vertically center content */
 }
 
 header h1 {
-  font-size: 1.8rem;
+  font-size: 2rem; /* Adjusted font size for better visibility */
   margin: 0;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  color: #0072CE; /* Estonian flag blue for the title */
 }
 
 nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+  list-style: none; /* Removes default bullet points */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Use flexbox for navigation links */
+  gap: 1.5rem; /* Add spacing between links */
 }
 
 nav a {
-  color: white;
+  color: #0072CE; /* Estonian flag blue for navigation links */
   font-weight: 500;
+  font-size: 1rem; /* Adjusted font size for a balanced look */
+  transition: color 0.25s ease-in-out; /* Smooth transition for hover effect */
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #004a99; /* Slightly darker blue on hover for contrast */
 }
 
 /* Hero Section */
@@ -88,22 +90,38 @@ nav a:hover {
 }
 
 .hero .btn:hover {
-  background-color: #004d40; /* Darker green on hover */
+  background-color: #005a4f; /* Darker green for hover */
 }
 
+/* General Button Styles */
 .btn {
   background-color: #00796b; /* Teal green */
   color: white;
-  padding: 0.75rem 1.5rem;
+  border: 2px solid black;
+  padding: 10px 20px;
   border-radius: 5px;
-  transition: background 0.3s;
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
+/* Hover Effect */
 .btn:hover {
   background-color: #004d40; /* Darker green on hover */
 }
+
+/* Specific Positioning for Payment Buttons */
+.payment-section .btn {
+  margin-top: 20px; /* Add some spacing above the button */
+}
+
 .next-button {
-  display: inline-block;
+  position: fixed; /* Fix the button to the screen */
+  bottom: 20px; /* 20px from the bottom of the screen */
+  right: 20px; /* 20px from the right edge of the screen */
   background-color: #00796b; /* Teal green */
   color: white;
   padding: 0.8rem 1.2rem;
@@ -115,7 +133,7 @@ nav a:hover {
 }
 
 .next-button:hover {
-  background-color: #004d40; /* Darker green on hover */
+  background-color: #005a4f; /* Darker teal green on hover */
 }
 
 /* About Section */
