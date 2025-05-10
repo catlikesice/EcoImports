@@ -157,4 +157,37 @@ footer {
   font-size: 0.9rem;
   color: #555;
 }
+/* Add box styling for products */
+.product {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.product h3 {
+  margin-top: 0;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.quantity-control button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.checkout-summary {
+  border: 2px dashed #007BFF;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 30px;
+  background-color: #eaf4ff;
+}
 
