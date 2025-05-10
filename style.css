@@ -30,32 +30,34 @@ header {
   background-color: #144d3c; /* Dark green */
   color: white;
   padding: 1rem 0;
+  display: flex; /* Use flexbox for smoother layout */
+  justify-content: space-between; /* Space out title and navigation */
+  align-items: center; /* Vertically center content */
 }
 
 header h1 {
-  font-size: 1.8rem;
+  font-size: 2rem; /* Adjusted font size for better visibility */
   margin: 0;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  color: #0072CE; /* Estonian flag blue for the title */
 }
 
 nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+  list-style: none; /* Removes default bullet points */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Use flexbox for navigation links */
+  gap: 1.5rem; /* Add spacing between links */
 }
 
 nav a {
-  color: white;
+  color: #0072CE; /* Estonian flag blue for navigation links */
   font-weight: 500;
+  font-size: 1rem; /* Adjusted font size for a balanced look */
+  transition: color 0.25s ease-in-out; /* Smooth transition for hover effect */
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #004a99; /* Slightly darker blue on hover for contrast */
 }
 
 /* Hero Section */
@@ -88,7 +90,7 @@ nav a:hover {
 }
 
 .hero .btn:hover {
-  background-color: #00796b; /* Teal green */
+  background-color: #005a4f; /* Darker green for hover */
 }
 
 /* General Button Styles */
@@ -115,6 +117,7 @@ nav a:hover {
 .payment-section .btn {
   margin-top: 20px; /* Add some spacing above the button */
 }
+
 .next-button {
   position: fixed; /* Fix the button to the screen */
   bottom: 20px; /* 20px from the bottom of the screen */
@@ -132,6 +135,7 @@ nav a:hover {
 .next-button:hover {
   background-color: #005a4f; /* Darker teal green on hover */
 }
+
 /* About Section */
 .about {
   background-color: #ffffff;
