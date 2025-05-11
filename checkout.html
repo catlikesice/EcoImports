@@ -6,29 +6,74 @@
   <title>Checkout – EcoImports</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+
+    header {
+      background-color: #004d3a; /* Dark green background */
+      color: #007bff; /* Blue text */
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #007bff; /* Blue text for navigation links */
+      text-decoration: none;
+      font-size: 18px;
+    }
+
     .checkout-container {
       max-width: 600px;
-      margin: 0 auto;
+      margin: 40px auto;
       padding: 20px;
-      background: #f9f9f9; /* Matches the background from the screenshot */
+      background: #f9f9f9;
       border: 1px solid #ddd;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 15px;
     }
+
     th, td {
       padding: 10px;
       border-bottom: 1px solid #ccc;
     }
+
     .total {
       text-align: right;
       font-weight: bold;
       margin-top: 10px;
     }
+
+    a {
+      text-decoration: none; /* Remove underline from the link */
+    }
+
     .checkout-btn {
       display: block;
       margin: 20px auto 0;
@@ -40,22 +85,28 @@
       cursor: pointer;
       text-align: center;
     }
+
+    footer {
+      background-color: #f1f1f1; /* Original footer background */
+      color: #333; /* Original footer text color */
+      text-align: center;
+      padding: 10px 0;
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1>BalticEco Imports</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="home.html">About us</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+    <h1>BalticEco Imports</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="home.html">About us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
+  
   <div class="checkout-container">
     <h1>Checkout</h1>
 
@@ -182,3 +233,4 @@
     updateTotals();
   </script>
 </body>
+</html>
