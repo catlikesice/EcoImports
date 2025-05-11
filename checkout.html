@@ -5,6 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checkout – EcoImports</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .checkout-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f9f9f9; /* Matches the background from the screenshot */
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 15px;
+    }
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+    .total {
+      text-align: right;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .checkout-btn {
+      display: block;
+      margin: 20px auto 0;
+      padding: 10px 20px;
+      background-color: #027b4b;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -146,4 +182,3 @@
     updateTotals();
   </script>
 </body>
-</html>
