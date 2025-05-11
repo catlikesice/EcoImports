@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checkout – EcoImports</title>
   <link rel="stylesheet" href="style.css">
-  <body>
+</head>
+<body>
   <header>
     <div class="container">
       <h1>BalticEco Imports</h1>
@@ -18,69 +20,15 @@
       </nav>
     </div>
   </header>
-  </body>
-  <style>
-    .checkout-container {
-      max-width: 600px;
-      margin: auto;
-      padding: 2rem;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 1.5rem;
-    }
-
-    th, td {
-      border-bottom: 1px solid #ccc;
-      padding: 0.75rem;
-      text-align: left;
-    }
-
-    .total {
-      font-weight: bold;
-      font-size: 1.2rem;
-      text-align: right;
-    }
-
-    .checkout-btn {
-      padding: 0.8rem 1.2rem;
-      background-color: #027b4b;
-      color: white;
-      border: none;
-      cursor: pointer;
-      float: right;
-    }
-
-    .quantity-input {
-      width: 50px;
-      text-align: center;
-    }
-
-    .error {
-      color: red;
-      font-size: 0.9rem;
-    }
-  </style>
-</head>
-<body>
   <div class="checkout-container">
     <h1>Checkout</h1>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Product</th>
-          <th>Qty</th>
-          <th>Price</th>
-          <th>Subtotal</th>
-        </tr>
-      </thead>
-      <tbody id="cart-items">
-        <!-- Items will be dynamically inserted here -->
-      </tbody>
-    </table>
+    <p>Please proceed to payment to complete your order.</p>
+    <a href="personal_information.html">
+      <button id="checkout-btn" class="checkout-btn">Proceed to Payment Process</button>
+    </a>
+  </div>
+</body>
+</html>
 
     <p class="total">Total: €<span id="total">0.00</span></p>
     <p>Total Items: <span id="total-items">0</span></p>
