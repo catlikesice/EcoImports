@@ -5,6 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Payment | BalticEco Imports</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://raw.githubusercontent.com/catlikesice/EcoImports/main/Screenshot%202025-05-06%20143651.png') center center / cover no-repeat;
+    }
+
+    header {
+      background-color: #004d3a; /* Dark green background */
+      color: #007bff; /* Blue text */
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #007bff; /* Blue text for navigation links */
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    main.container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .payment-section {
+      margin-bottom: 30px;
+    }
+
+    .payment-section h3 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    input, button, a.btn {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #027b4b;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #025c3a;
+    }
+
+    a.btn {
+      display: block;
+      text-align: center;
+      background-color: #027b4b;
+      color: white;
+      text-decoration: none;
+    }
+
+    a.btn:hover {
+      background-color: #025c3a;
+    }
+
+    footer {
+      background-color: #f1f1f1; /* Original footer background */
+      color: #333; /* Original footer text color */
+      text-align: center;
+      padding: 10px 0;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -74,46 +176,5 @@
       }
     });
   </script>
-</body>
-</html>
-
-  <main class="container">
-    <h2>Choose a Payment Method</h2>
-
-    <section class="payment-section">
-      <h3>Pay with Card</h3>
-      <form id="card-payment-form">
-        <label for="cardholder">Name on Card:</label>
-        <input type="text" id="cardholder" required />
-
-        <label for="cardnumber">Card Number:</label>
-        <input type="text" id="cardnumber" maxlength="19" placeholder="1234 5678 9012 3456" required />
-
-        <div class="row">
-          <div>
-            <label for="expiry">Expiry Date:</label>
-            <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required />
-          </div>
-          <div>
-            <label for="cvv">CVV:</label>
-            <input type="text" id="cvv" maxlength="4" required />
-          </div>
-        </div>
-
-        <button type="submit" class="btn">Pay Now</button>
-      </form>
-    </section>
-
-    <section class="payment-section">
-      <h3>Or Pay with PayPal</h3>
-      <a href="https://www.paypal.com" target="_blank" class="btn">Continue to PayPal</a>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 BalticEco Imports. All rights reserved.</p>
-    </div>
-  </footer>
 </body>
 </html>
