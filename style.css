@@ -192,29 +192,27 @@ footer {
 }
 .middle-section {
   background: url('https://raw.githubusercontent.com/catlikesice/EcoImports/main/Screenshot%202025-05-06%20143651.png') center center / cover no-repeat;
-  min-height: calc(100vh - 60px); /* Ensure full height minus header height (adjust header height as needed) */
+  min-height: calc(100vh - 60px); /* Full height minus header height */
   width: 100%; /* Full width of the viewport */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
   text-align: center;
   color: #ffffff; /* White text for contrast */
   padding: 20px;
   margin: 0; /* Remove default margins */
-  overflow: hidden; /* Prevent unintended scrollbars */
 }
-
 .middle-section h2 {
-  font-size: 3rem; /* Larger heading size for emphasis */
-  margin-bottom: 10px;
+  font-size: 3rem; /* Larger heading size */
+  margin-bottom: 10px; /* Add spacing below the heading */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Add shadow for better text readability */
 }
-
 .middle-section p {
   font-size: 1.5rem; /* Adjust paragraph size */
+  margin-top: 0; /* Ensure no unintended space above paragraph */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Add shadow for better text readability */
 }
-
 /* Ensure proper behavior on smaller screens */
 @media (max-width: 768px) {
   .middle-section h2 {
