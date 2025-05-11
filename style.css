@@ -192,21 +192,35 @@ footer {
 }
 .middle-section {
   background: url('https://raw.githubusercontent.com/catlikesice/EcoImports/main/Screenshot%202025-05-06%20143651.png') center center / cover no-repeat;
-  height: 50vh; /* Makes the section cover 50% of the viewport height */
+  min-height: calc(100vh - 60px); /* Ensure full height minus header height (adjust header height as needed) */
+  width: 100%; /* Full width of the viewport */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: #ffffff; /* White text for contrast */
   padding: 20px;
-  border-radius: 10px; /* Optional: Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
-  margin: 20px auto; /* Center the section horizontally */
-  width: 90%; /* Ensure it doesn't span the full page width */
+  margin: 0; /* Remove default margins */
+  overflow: hidden; /* Prevent unintended scrollbars */
 }
 
 .middle-section h2 {
-  font-size: 2.5rem; /* Adjust heading size */
+  font-size: 3rem; /* Larger heading size for emphasis */
   margin-bottom: 10px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Add a shadow to make text readable */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Add shadow for better text readability */
+}
+
+.middle-section p {
+  font-size: 1.5rem; /* Adjust paragraph size */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Add shadow for better text readability */
+}
+
+/* Ensure proper behavior on smaller screens */
+@media (max-width: 768px) {
+  .middle-section h2 {
+    font-size: 2rem; /* Reduce heading size on small screens */
+  }
+  .middle-section p {
+    font-size: 1.2rem; /* Reduce paragraph size on small screens */
+  }
 }
