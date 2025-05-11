@@ -22,20 +22,36 @@
   </header>
   <div class="checkout-container">
     <h1>Checkout</h1>
-    <a href="personal_information.html">
-      <button id="checkout-btn" class="checkout-btn">Proceed to Payment Process</button>
-    </a>
-  </div>
-</body>
-</html>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Qty</th>
+          <th>Price</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items">
+        <!-- Items will be dynamically inserted here -->
+      </tbody>
+    </table>
 
     <p class="total">Total: €<span id="total">0.00</span></p>
     <p>Total Items: <span id="total-items">0</span></p>
 
     <p id="error-message" class="error"></p>
 
-    <a href="personal_information.html"><button id="checkout-btn" class="checkout-btn" disabled>Proceed to Payment Process</button></a>
+    <a href="personal_information.html">
+      <button id="checkout-btn" class="checkout-btn" disabled>Proceed to Payment Process</button>
+    </a>
   </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 BalticEco Imports. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script>
     // Simulated stock data (this would typically come from a backend or database)
