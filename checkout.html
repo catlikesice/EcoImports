@@ -22,13 +22,20 @@
   </header>
   <div class="checkout-container">
     <h1>Checkout</h1>
-    <p>Please proceed to payment to complete your order.</p>
     <a href="personal_information.html">
       <button id="checkout-btn" class="checkout-btn">Proceed to Payment Process</button>
     </a>
   </div>
 </body>
 </html>
+
+    <p class="total">Total: €<span id="total">0.00</span></p>
+    <p>Total Items: <span id="total-items">0</span></p>
+
+    <p id="error-message" class="error"></p>
+
+    <a href="personal_information.html"><button id="checkout-btn" class="checkout-btn" disabled>Proceed to Payment Process</button></a>
+  </div>
 
   <script>
     // Simulated stock data (this would typically come from a backend or database)
